@@ -1,14 +1,14 @@
 package org.example.Singleton;
-
-public class Database {
-    private static Database instance = null;
-    private Database(){
+// Singleton class  implementation using lazy initialization
+public class Database1 {
+    private static Database1 instance = null; // static variable
+    private Database1(){
         // private constructor
     }
-    public static Database getInstance(){
-        if(instance == null){
-            instance = new Database();
+    public static Database1 getInstance(){
+        if(instance == null){                  // lazy initialization
+            instance = new Database1();
         }
-        return new Database();
+        return new Database1();
     }
 }
